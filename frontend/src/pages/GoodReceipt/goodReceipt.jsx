@@ -19,6 +19,7 @@ function GoodsReceiptPage() {
         </select>
         <button style={{ padding: "8px 16px", background: "#2C4FDB", color: "#fff", border: "none", borderRadius: "8px", fontSize: "13px", fontWeight: 600, cursor: "pointer" }}>+ New Receipt</button>
       </div>
+
 {/* New Goods Receipt Form */}
 <div style={{ background: "#fff", borderRadius: "12px", border: "1px solid #E2E8F0", marginBottom: "20px" }}>
   <div style={{ padding: "14px 20px", borderBottom: "1px solid #E2E8F0", display: "flex", alignItems: "center", gap: "8px" }}>
