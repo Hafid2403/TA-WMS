@@ -1,0 +1,2570 @@
+Form2
+Capstone Design System Analysis
+Title : Optimization Business Flow using Warehouse
+Management
+GROUP MEMBER:
+No.
+
+Student Name
+
+Student ID
+
+1.
+
+Muhammad Hafid Al Asyrofi
+
+001202300224
+
+2.
+
+Muhammad Kasyfil Aziz
+
+001202300022
+
+Setiyadi
+3.
+
+Muhammad Habibi Dzikra
+
+01220230004
+
+Advisor: Sir. Nurhadi Sukmana
+
+Submitted for
+Capstone Design Project
+to Faculty of Computer Science
+President University
+
+TABLE OF CONTENT
+
+A. EXISTING AND PROPOSED SYSTEM.............................................................................9
+1.​
+
+Existing Business Process.............................................................................................. 9
+
+2.​
+
+Proposed Business Process.......................................................................................... 10
+
+B. Global Description Of The Product.....................................................................................11
+2.1​
+
+Main Functionality............................................................................................... 11
+
+C. REQUIREMENT ANALYSIS............................................................................................ 15
+2.2​
+
+Interface................................................................................................................15
+
+2.3​
+
+Functional Description......................................................................................... 15
+
+2.4​
+
+Data Requirement from user’s perspective.......................................................... 16
+
+2.5​
+
+Functional Requirement....................................................................................... 27
+
+3.​
+
+Material Request Process............................................................................................. 29
+
+4.​
+
+User Login and Role Management.............................................................................. 31
+
+D. ALTERNATIVE SOLUTION............................................................................................. 33
+
+STATEMENT OF ORIGINALITY
+
+In my capacity as an active student at President University and as the author of the Capstone
+Design Project stated below:
+Name​ ​
+
+​
+
+: 1. Student Name – NIM
+
+​
+
+​
+
+​
+
+2. Student Name – NIM
+
+​
+
+​
+
+​
+
+3. Student Name – NIM
+
+Faculty​​
+
+​
+
+: Computer Science
+
+I hereby declare that my Capstone Design Project entitled “TITLE” is to the best of my
+knowledge and belief, an original piece of work based on sound academic principles. If there
+is any plagiarism detected in this final project, I am willing to be personally responsible for
+the consequences of these acts of plagiarism and will accept the sanctions against these acts
+in accordance with the rules and policies of President University.
+I also declare that this work, either in whole or in part, has not been submitted to another
+university to obtain a degree.
+
+Cikarang, January 2024
+
+Signer 1
+
+Signer 2
+
+Signer 3
+
+Student Name –
+
+Student Name –
+
+Student Name –
+
+NIM
+
+NIM
+
+NIM
+
+TITLE
+
+Approved:
+
+Nur Hadisukmana
+
+{Head of Study Program Name}
+
+Capstone Advisor
+
+Study Program Head of XX
+
+Prof. Dr. Ir. Wiranto Herry Utomo, M.Kom.
+Dean of Faculty of Computer Science
+
+PART 2
+SYSTEM ANALYSIS
+
+Consists of:
+A.​ EXISTING AND PROPOSED SYSTEM
+B.​ GLOBAL DESCRIPTION OF THE PRODUCT
+C.​ REQUIREMENT ANALYSIS
+D.​ ALTERNATIVE SOLUTION
+
+BAB 1
+A.​ EXISTING AND PROPOSED SYSTEM
+1.​ Existing Business Process
+The existing warehouse management process is still handled using manual methods
+and separate records. There is no integrated system to manage orders, inbound goods,
+material requests, inventory updates, and stock opname.
+​
+When an order is received, warehouse staff manually check stock availability using
+spreadsheets or written records. Because stock data is not updated in real time, the
+information is often inaccurate. This can cause delays in order fulfillment.
+Inbound goods from suppliers are recorded manually when goods arrive at the warehouse.
+Stock updates depend on manual input, which increases the risk of errors and data
+inconsistency.
+Similarly, Outbound goods are also recorded manually during the picking and delivery, since
+inbound and outbound data are not connected, inventory records are often different from
+actual physical stock.
+Stock opname is conducted by manually counting goods in the warehouse and comparing
+them with recorded data. This process takes a long time and often results in discrepancies due
+to previous recording errors.
+Overall, the existing process causes inaccurate inventory data, slow warehouse operation, and
+high dependence on manual work.
+So, the system we developed aims to solve the problem of manual work that often causes data
+errors and also makes the work of warehouse staff there easier.
+with a neat flow system and minimal manual calculations, it can reduce these problems.
+
+2.​ Proposed Business Process
+The proposed business process applies an ERP based warehouse management system,
+as shown in the proposed business process flow diagram. This system integrates warehouse
+activities from inbound goods handling to outbound distribution.
+The process begins when the purchase order (PO) is created and goods arrive at the
+warehouse. Inbound goods are recorded in the system and proceed to the quality control (QC)
+process. Warehouse staff perform quality and quantity checks to ensure compliance with
+purchase orders. Goods that fail the inspection are returned to the supplier.
+Approved goods are updated in the system and moved to the putaway process, where they are
+stored in designated storage locations. The system then updates the inventory status as stock
+available.
+When the production department submits a material request, the system checks stock
+availability. If stock is available, the warehouse performs the picking process and hands over
+goods to the requesting department. All transactions are recorded automatically in the system.
+This proposed business process reduces manual work, improves inventory accuracy, and
+increases warehouse efficiency though real time data integration.
+
+B.​Global Description of The Product
+2.1​Main Functionality
+​
+​
+
+The proposed product is an integrated enterprise resource planning system designed
+
+to optimize and streamline the company’s business processes by integrating multiple
+departments into a single, centralized platform. The system aims to eliminate data
+fragmentation, reduce manual work, and improve operational efficiency and decision making
+​
+The ERP system provides real time data synchronization across departments such as
+administration, warehouse, and management, ensuring accurate and consistent information
+throughout the organization
+​
+The main functionalities of ERP system are described as follows:
+●​ Order Management Module
+This functionality manages the entire order lifecycle, from order creation to
+goods outflows confirmation.
+-​ Record and manage customer order electronically
+-​ Automatically validate product availability
+-​ Reduce order processing time and human error
+●​ Inventory Management Module
+This module provides real time visibility and control over inventory activities.
+-​ Monitor stock levels of inbound and outbound goods
+-​ Automatically update inventory availability after input data goods
+-​ Prevent stock shortage and overstock conditions
+-​ Provide accurate product availability information
+●​ Warehouse Management Module
+This functionality supports efficient warehouse operations
+
+-​ Manage goods receiving and dispatch processes
+-​ Track warehouse stock movement
+-​ Assign task for picking goods
+-​ Ensure accurate goods handling and storage
+●​ Logistic and Delivery Management Module
+This module handles distribution and delivery operations
+●​ Reporting and Decision Support Module
+This module provides analytical and reporting capabilities for management
+-​ Provide inventory, sales, and delivery performance reports
+-​ Generate realtime operational reports
+-​ Support strategic and operational decision making
+-​ Improve transparency and business control
+●​ User Management and Access Control
+This functionality ensures system security and proper access rights.
+-​ Manage user role and permissions
+-​ Restrict access based on job functions
+-​ Secure sensitive business data
+-​ Maintain system accountability
+1.​ User Characteristics
+Users
+Manager
+
+Responsibility
+●​ Approve material
+requests submitted
+by deaprtements
+●​ Monitor inventory
+status and
+warehouse
+performance
+●​ Review operational
+and stock reports
+
+Access rights
+●​ Full access to
+inventory data
+●​ Approval access
+for material
+requests
+●​ Access to
+reporting and
+monitoring
+feature
+
+Education Levels
+Bachelor’s degree
+or equivalent in
+management,
+industrial
+engineering, or
+related flieds
+
+Skill Levels
+●​ Intermedia
+te to
+advance
+computer
+skills
+●​ Basix
+understan
+ding of
+warehouse
+and
+inventory
+manageme
+nt
+processes
+
+Type of Training
+●​ System
+operation
+training
+●​ Training on
+inbound, and
+inventory
+management
+modules
+
+●​ Short system
+usage
+training
+●​ Training on
+approval
+workflows
+and reporting
+features
+
+PIC
+
+●​ Record goods
+
+●​ Create and
+
+Bachelor degree
+
+●​ Intermedia
+
+●​ System
+
+update inbound
+
+in industrial
+
+te
+
+operation
+
+●​ Process approved
+
+and outbound
+
+engineering or
+
+computer
+
+training
+
+material requests
+
+transactions
+
+related flieds
+
+skills
+
+●​ Training on
+
+●​ Updated stock data
+
+●​ View inventory
+
+●​ Familiarit
+
+inbound,
+
+data related to
+
+y with
+
+outbound,
+
+warehouse
+
+warehouse
+
+and inventory
+
+operation
+
+operationa
+
+management
+
+l
+
+modules
+
+receipt
+
+in system
+
+●​ Limited access
+
+procedure
+
+to reports
+
+s
+
+Staff
+
+●​ Conduct stock
+opname activities
+●​ Input inspection
+
+●​ Input qc result
+
+Bachelor’s
+
+and stock
+
+degrees in related
+
+opname data
+
+fields
+
+●​ Basic
+computer
+●​ Ability to
+
+●​ Basic system
+training
+●​ Training on
+
+●​ View inventory
+
+operated
+
+stock opname
+
+system
+
+information
+
+warehouse
+
+procedures
+
+●​ Input goods
+
+●​ No approval or
+
+equipment
+
+inbound data
+
+administration
+
+and stock data into
+
+access
+
+2.​ Constraints
+From the user’s point of view, the ERP based warehouse management system
+depends on accurate data input. Warehouse staff must correctly record inbound goods,
+outbound goods, and stock opname activities. If data is entered incorrectly, inventory
+information in the system may still become inaccurate.
+
+The system also requires basic user training, users who are not familiar with the
+computer base system may need time to adapt to the new workflow. During early
+stages of implementation, this learning process may slightly affect work speed.
+In addition, the system relies on system and network availability. Since warehouse
+data updated in real time, system downtime or internet issues may temporarily limit
+access to the system and delay transaction recording.
+Lastly, the system is designed with a limited scope focused on warehouse
+management only.
+3.​ Product Development Environment
+a.​ Hardware: Laptop
+b.​ Software: Visual Studio Code, XAMPP, MySQL
+c.​ Connection: Wi-Fi
+4.​ Product Operational Environment
+a.​ Hardware: Desktop PC or Laptop for users
+b.​ Software: Web Browser (Microsoft Edge, Chrome)
+c.​ Connection: Wi-Fi
+
+C.​REQUIREMENT ANALYSIS
+2.2​ Interface
+Hardware interface: The system can be accessed using desktop PC or Laptop by
+warehouse staff.
+Software Interface: The system is a web-based application that can be accessed
+through modern web browsers.
+Connection: The system uses a WIFI or local network connection to access the server
+and database.
+2.3​ Functional Description
+
+2.4​Use case scenarios
+Use Case 1: Receive Goods Primary Actor: PIC Supporting Actor: QC
+Preconditions:
+●​ A purchase order exists in the system
+●​ PIC is logged in
+Main Flow:
+1.​ PIC logs into the system
+2.​ PIC navigates to the Receive Goods section
+
+3.​ PIC enters the delivery details including vendor information and items received
+4.​ System saves the goods with a status of pending inspection
+5.​ System sends a notification to the QC team to begin the inspection process
+Post Condition:
+●​ Goods are recorded in the system with a pending QC status
+Use Case 2: Inspect Incoming Goods Primary Actor: QC
+Preconditions:
+●​
+
+Goods have been received and are marked as pending inspection
+
+Main Flow:
+1.​ QC logs into the system
+2.​ QC opens the list of goods pending inspection and selects the relevant delivery
+3.​ QC physically checks the quantity and condition of each item
+4.​ QC records the inspection results in the system
+5.​ QC marks each item as either accepted or rejected
+Alternative Flow (Rejected):
+●​
+
+System automatically triggers the return to vendor process for rejected items
+
+Post Condition:
+●​
+
+Goods status is updated based on the inspection outcome
+
+Use Case 3: Accept / Reject Items Primary Actor: QC
+Main Flow:
+1.​ QC confirms the accepted items in the system
+2.​ System adds the accepted quantity to the warehouse inventory
+3.​ Stock becomes available for material requests
+Alternative Flow (Rejected):
+●​
+
+QC marks the items as rejected
+
+●​
+
+System generates a return record for the rejected items
+
+●​
+
+The return process is initiated
+
+Post Condition:
+●​
+
+Inventory is updated to reflect the accepted and rejected quantities
+
+Use Case 4: Process Return to Vendor Primary Actor: PIC
+Preconditions:
+●​
+
+Items have been rejected during QC inspection
+
+Main Flow:
+1.​ PIC reviews the list of rejected items
+2.​ PIC creates a return document in the system
+3.​ System updates the inventory to reflect that the items have been returned
+4.​ Vendor is notified of the return
+Post Condition:
+●​
+
+Rejected goods are removed from the stock record
+
+Use Case 5: Conduct Stock Opname Primary Actor: PIC
+Preconditions:
+●​
+
+PIC is logged into the system
+
+Main Flow:
+1.​ PIC opens the Stock Opname section and creates a new session
+2.​ PIC physically counts the inventory on the warehouse floor
+3.​ PIC enters the counted quantities into the system
+4.​ System compares the physical count against the current system stock and calculates
+any discrepancies
+Post Condition:
+●​
+
+Stock figures are adjusted once the opname results are reviewed and approved
+
+Use Case 6: Submit Material Request Primary Actor: Department
+Preconditions:
+●​
+
+Department user is logged into the system
+
+Main Flow:
+1.​ Department navigates to the Submit Material Request section
+2.​ Department fills in the requested items and the quantities needed
+3.​ System saves the request with a status of pending approval
+4.​ PIC receives a notification to review the incoming request
+Post Condition:
+●​
+
+Request is saved in the system and is awaiting approval
+
+Use Case 7: Approve Material Request Primary Actor: PIC
+Preconditions:
+●​
+
+A material request has been submitted by a department
+
+Main Flow:
+1.​ PIC opens the request and reviews the details
+2.​ PIC checks whether the requested items are available in stock
+3.​ PIC approves or rejects the request based on availability and other considerations
+Alternative Flow (Approved):
+●​
+
+System updates the request status to approved
+
+●​
+
+System triggers the material request processing flow for the PIC to fulfill
+
+Post Condition:
+●​
+
+Request status is updated to either approved or rejected
+
+2.5​
+
+Data Requirement from user’s perspective
+
+A.​ ERD (Entity Relationship Diagram)
+
+B.​ Data Dictionary.
+
+MASTER DATA
+Table: warehouses
+No
+
+Column
+
+Data Type
+
+Constraint
+
+1
+
+warehouse_id
+
+INT
+
+2
+
+warehouse_name
+
+VARCHAR(100)
+
+NOT NULL
+
+Name of the warehouse
+
+3
+
+address
+
+TEXT
+
+NULL
+
+Warehouse address
+
+4
+
+city
+
+VARCHAR(100)
+
+NULL
+
+City where the warehouse is located
+
+5
+
+pic_id
+
+INT
+
+6
+
+is_active
+
+BOOLEAN
+
+DEFAULT true
+
+Active status of the warehouse
+
+7
+
+created_at
+
+TIMESTAMP
+
+DEFAULT NOW()
+
+Record creation timestamp
+
+Constraint
+
+Description
+
+PK, AUTO
+INCREMENT
+
+FK → users.user_id,
+NULL
+
+Description
+Unique ID of the warehouse
+
+Primary person in charge of the warehouse
+
+Table: roles
+No
+
+Column
+
+Data Type
+
+1
+
+role_id
+
+INT
+
+2
+
+role_name
+
+VARCHAR(50)
+
+NOT NULL
+
+Role name (master, pic, qc)
+
+3
+
+description
+
+TEXT
+
+NULL
+
+Role description
+
+PK, AUTO
+INCREMENT
+
+Unique ID of the role
+
+Table: users
+No
+
+Column
+
+Data Type
+
+Constraint
+
+Description
+
+1
+
+user_id
+
+INT
+
+PK, AUTO INCREMENT
+
+Unique ID of the user
+
+2
+
+warehouse_id
+
+INT
+
+FK →
+warehouses.warehouse_id
+, NOT NULL
+
+Warehouse the user is assigned to
+
+No
+
+Column
+
+Data Type
+
+Constraint
+
+3
+
+role_id
+
+INT
+
+4
+
+full_name
+
+VARCHAR(100)
+
+NOT NULL
+
+Full name of the user
+
+5
+
+email
+
+VARCHAR(100)
+
+NOT NULL, UNIQUE
+
+User email address
+
+6
+
+password_hash
+
+VARCHAR(255)
+
+NOT NULL
+
+Encrypted user password
+
+7
+
+is_active
+
+BOOLEAN
+
+DEFAULT true
+
+Active status of the user
+
+8
+
+created_at
+
+TIMESTAMP
+
+DEFAULT NOW()
+
+Record creation timestamp
+
+Constraint
+
+FK → roles.role_id, NOT
+NULL
+
+Description
+Role of the user
+
+Table: vendors
+No
+
+Column
+
+Data Type
+
+1
+
+vendor_id
+
+INT
+
+2
+
+vendor_name
+
+VARCHAR(100)
+
+NOT NULL
+
+Name of the vendor company
+
+3
+
+contact_person
+
+VARCHAR(100)
+
+NULL
+
+Vendor contact person name
+
+4
+
+phone
+
+VARCHAR(20)
+
+NULL
+
+Vendor phone number
+
+5
+
+email
+
+VARCHAR(100)
+
+NULL
+
+Vendor email address
+
+6
+
+address
+
+TEXT
+
+NULL
+
+Vendor address
+
+7
+
+is_active
+
+BOOLEAN
+
+DEFAULT true
+
+Active status of the vendor
+
+8
+
+created_at
+
+TIMESTAMP
+
+DEFAULT NOW()
+
+Record creation timestamp
+
+Constraint
+
+Description
+
+PK, AUTO
+INCREMENT
+
+Description
+Unique ID of the vendor
+
+Table: product_categories
+No
+
+Column
+
+Data Type
+
+1
+
+category_id
+
+INT
+
+2
+
+category_name
+
+VARCHAR(100)
+
+NOT NULL
+
+Name of the product category
+
+3
+
+description
+
+TEXT
+
+NULL
+
+Category description
+
+Table: products
+
+PK, AUTO
+INCREMENT
+
+Unique ID of the category
+
+No
+
+Column
+
+Data Type
+
+Constraint
+
+Description
+
+1
+
+product_id
+
+INT
+
+PK, AUTO INCREMENT
+
+Unique ID of the product
+
+2
+
+category_id
+
+INT
+
+FK →
+product_categories.category_id,
+
+Product category reference
+
+NOT NULL
+3
+
+internal_code
+
+VARCHAR(50)
+
+NOT NULL, UNIQUE
+
+Internal product code assigned by the company
+
+4
+
+product_name
+
+VARCHAR(100)
+
+NOT NULL
+
+Name of the product
+
+5
+
+unit
+
+VARCHAR(20)
+
+NOT NULL
+
+Unit of measurement (meter, pcs, kg)
+
+6
+
+description
+
+TEXT
+
+NULL
+
+Product description
+
+7
+
+min_stock
+
+INT
+
+DEFAULT 0
+
+Minimum stock threshold
+
+8
+
+is_active
+
+BOOLEAN
+
+DEFAULT true
+
+Active status of the product
+
+9
+
+created_at
+
+TIMESTAMP
+
+DEFAULT NOW()
+
+Record creation timestamp
+
+Table: vendor_products
+No
+
+Column
+
+Data Type
+
+1
+
+vendor_product_id
+
+INT
+
+2
+
+vendor_id
+
+INT
+
+Constraint
+PK, AUTO
+INCREMENT
+
+Description
+Unique ID of the vendor-product mapping
+
+FK →
+vendors.vendor_id,
+
+Vendor supplying the product
+
+NOT NULL
+FK →
+3
+
+product_id
+
+INT
+
+products.product_id,
+
+Internal product reference
+
+NOT NULL
+4
+
+vendor_product_code
+
+VARCHAR(50)
+
+NOT NULL
+
+Product code assigned by the vendor
+
+5
+
+vendor_product_name
+
+VARCHAR(100)
+
+NULL
+
+Product name used by the vendor
+
+6
+
+unit_price
+
+DECIMAL(15,2)
+
+NULL
+
+Unit price from the vendor
+
+7
+
+is_active
+
+BOOLEAN
+
+DEFAULT true
+
+Active status of the mapping
+
+Table: departments
+
+No
+
+Column
+
+Data Type
+
+Constraint
+
+1
+
+department_id
+
+INT
+
+2
+
+department_name
+
+VARCHAR(100)
+
+NOT NULL
+
+Name of the department
+
+3
+
+is_active
+
+BOOLEAN
+
+DEFAULT true
+
+Active status of the department
+
+PK, AUTO
+INCREMENT
+
+Description
+Unique ID of the department
+
+INVENTORY
+Table: stock
+No
+
+Column
+
+Data Type
+
+Constraint
+
+Description
+
+1
+
+stock_id
+
+INT
+
+PK, AUTO INCREMENT
+
+Unique ID of the stock record
+
+FK →
+2
+
+warehouse_id
+
+INT
+
+warehouses.warehouse_id
+
+Warehouse storing the product
+
+, NOT NULL
+FK →
+3
+
+product_id
+
+INT
+
+products.product_id, NOT
+
+Product being stored
+
+NULL
+4
+
+qty_available
+
+INT
+
+DEFAULT 0
+
+Available stock quantity
+
+5
+
+qty_reserved
+
+INT
+
+DEFAULT 0
+
+Reserved stock quantity
+
+6
+
+zone
+
+VARCHAR(10)
+
+NULL
+
+Storage zone (e.g. A, B, C)
+
+7
+
+rack
+
+VARCHAR(10)
+
+NULL
+
+Rack number in the zone
+
+8
+
+bin
+
+VARCHAR(10)
+
+NULL
+
+Bin or slot number on the rack
+
+9
+
+last_updated
+
+TIMESTAMP
+
+DEFAULT NOW()
+
+Timestamp of last stock update
+
+GOODS RECEIPT
+Table: goods_receipts
+No
+
+Column
+
+Data Type
+
+Constraint
+
+Description
+
+1
+
+gr_id
+
+INT
+
+PK, AUTO INCREMENT
+
+Unique ID of the goods receipt
+
+2
+
+gr_number
+
+VARCHAR(50)
+
+NOT NULL, UNIQUE
+
+Goods receipt document number
+
+No
+
+Column
+
+Data Type
+
+Constraint
+
+Description
+
+FK →
+3
+
+warehouse_id
+
+INT
+
+warehouses.warehouse_id,
+
+Receiving warehouse
+
+NOT NULL
+FK → vendors.vendor_id,
+
+4
+
+vendor_id
+
+INT
+
+5
+
+received_by
+
+INT
+
+6
+
+receipt_date
+
+DATETIME
+
+NOT NULL
+
+Date and time goods were received
+
+7
+
+receipt_type
+
+ENUM
+
+NOT NULL
+
+Receipt type: good_receipt / pending_order
+
+8
+
+notes
+
+TEXT
+
+NULL
+
+Additional notes on the receipt
+
+NOT NULL
+FK → users.user_id, NOT
+NULL
+
+Vendor delivering the goods
+
+PIC who received the goods
+
+Table: goods_receipt_items
+No
+
+Column
+
+Data Type
+
+Constraint
+
+Description
+
+1
+
+gr_item_id
+
+INT
+
+PK, AUTO INCREMENT
+
+Unique ID of the receipt item
+
+2
+
+gr_id
+
+INT
+
+3
+
+vendor_product_id
+
+INT
+
+FK → goods_receipts.gr_id, NOT
+NULL
+
+Reference to the goods receipt
+
+FK →
+vendor_products.vendor_product_id
+
+Vendor product code reference
+
+, NOT NULL
+FK → products.product_id, NOT
+
+4
+
+product_id
+
+INT
+
+5
+
+qty_received
+
+INT
+
+NOT NULL
+
+Quantity of goods received
+
+6
+
+qty_accepted
+
+INT
+
+DEFAULT 0
+
+Quantity accepted after QC inspection
+
+7
+
+qty_rejected
+
+INT
+
+DEFAULT 0
+
+Quantity rejected after QC inspection
+
+8
+
+qc_status
+
+ENUM
+
+NOT NULL
+
+QC status: pending / passed / partial / rejected
+
+9
+
+qc_by
+
+INT
+
+FK → users.user_id, NULL
+
+QC user who inspected the item
+
+10
+
+qc_date
+
+DATETIME
+
+NULL
+
+Date and time of QC inspection
+
+11
+
+qc_notes
+
+TEXT
+
+NULL
+
+Notes from QC inspection
+
+Table: return_items
+
+NULL
+
+Internal product reference
+
+Data
+
+No
+
+Column
+
+1
+
+return_id
+
+INT
+
+2
+
+gr_item_id
+
+INT
+
+Type
+
+Constraint
+
+Description
+
+PK, AUTO INCREMENT
+
+Unique ID of the return record
+
+FK →
+goods_receipt_items.gr_item_id,
+
+Reference to the rejected GR item
+
+NOT NULL
+FK → products.product_id, NOT
+
+3
+
+product_id
+
+INT
+
+4
+
+vendor_id
+
+INT
+
+5
+
+qty_returned
+
+INT
+
+NOT NULL
+
+Quantity of goods returned
+
+6
+
+reason
+
+TEXT
+
+NULL
+
+Reason for returning the goods
+
+7
+
+return_date
+
+DATE
+
+NOT NULL
+
+Date of return
+
+8
+
+returned_by
+
+INT
+
+FK → users.user_id, NOT NULL
+
+User who processed the return
+
+9
+
+status
+
+ENUM
+
+NOT NULL
+
+Return status: pending / sent / acknowledged
+
+NULL
+FK → vendors.vendor_id, NOT
+NULL
+
+Product being returned
+
+Vendor receiving the return
+
+MATERIAL REQUEST
+
+Table: material_requests
+No
+
+Column
+
+Data Type
+
+Constraint
+
+Description
+
+1
+
+mr_id
+
+INT
+
+PK, AUTO INCREMENT
+
+Unique ID of the material request
+
+2
+
+mr_number
+
+VARCHAR(50)
+
+NOT NULL, UNIQUE
+
+Material request document number
+
+3
+
+warehouse_id
+
+INT
+
+FK →
+warehouses.warehouse_id,
+
+Warehouse receiving the request
+
+NOT NULL
+FK →
+4
+
+department_id
+
+INT
+
+departments.department_id,
+
+Department making the request
+
+NOT NULL
+5
+
+requested_by
+
+VARCHAR(100)
+
+NOT NULL
+
+Name of the requester from the department
+
+No
+
+Column
+
+Data Type
+
+Constraint
+
+Description
+
+6
+
+request_date
+
+DATETIME
+
+NOT NULL
+
+Date and time the request was made
+
+7
+
+status
+
+ENUM
+
+NOT NULL
+
+Status: pending / approved / rejected / completed
+
+8
+
+approved_by
+
+INT
+
+9
+
+approved_date
+
+DATETIME
+
+NULL
+
+Date and time of approval
+
+10
+
+notes
+
+TEXT
+
+NULL
+
+Additional notes on the request
+
+FK → users.user_id,
+NULL
+
+Master user who approved the request
+
+Table: material_request_items
+No
+
+Column
+
+Data Type
+
+1
+
+mr_item_id
+
+INT
+
+2
+
+mr_id
+
+INT
+
+Constraint
+PK, AUTO
+INCREMENT
+
+Description
+Unique ID of the request item
+
+FK →
+material_requests.mr_id,
+
+Reference to the material request
+
+NOT NULL
+FK →
+3
+
+product_id
+
+INT
+
+products.product_id,
+
+Product being requested
+
+NOT NULL
+4
+
+qty_requested
+
+INT
+
+NOT NULL
+
+Quantity requested
+
+5
+
+qty_fulfilled
+
+INT
+
+DEFAULT 0
+
+Quantity fulfilled; stock is reduced automatically
+
+6
+
+notes
+
+TEXT
+
+NULL
+
+Additional notes on the item
+
+STOCK OPNAME
+
+Table: stock_opnames
+No
+
+Column
+
+Data Type
+
+Constraint
+
+Description
+
+1
+
+opname_id
+
+INT
+
+PK, AUTO INCREMENT
+
+Unique ID of the stock opname
+
+FK →
+2
+
+warehouse_id
+
+INT
+
+warehouses.warehouse_id
+
+Warehouse being counted
+
+, NOT NULL
+
+3
+
+conducted_by
+
+INT
+
+FK → users.user_id, NOT
+NULL
+
+PIC conducting the opname
+
+No
+
+Column
+
+Data Type
+
+Constraint
+
+4
+
+approved_by
+
+INT
+
+5
+
+start_date
+
+DATETIME
+
+NOT NULL
+
+Start date and time of the opname
+
+6
+
+end_date
+
+DATETIME
+
+NULL
+
+End date and time of the opname
+
+7
+
+status
+
+ENUM
+
+NOT NULL
+
+Status: draft / in_progress / completed / approved
+
+8
+
+notes
+
+TEXT
+
+NULL
+
+Additional notes on the opname
+
+FK → users.user_id,
+NULL
+
+Description
+Master user who approved the opname
+
+Table: stock_opname_items
+No
+
+Column
+
+Data Type
+
+Constraint
+
+Description
+
+1
+
+opname_item_id
+
+INT
+
+PK, AUTO INCREMENT
+
+Unique ID of the opname item
+
+2
+
+opname_id
+
+INT
+
+FK →
+stock_opnames.opname_id,
+
+Reference to the stock opname
+
+NOT NULL
+FK → products.product_id,
+
+3
+
+product_id
+
+INT
+
+4
+
+system_qty
+
+INT
+
+NOT NULL
+
+Stock quantity according to the system
+
+5
+
+physical_qty
+
+INT
+
+NOT NULL
+
+Actual physical stock count
+
+6
+
+discrepancy
+
+INT
+
+NOT NULL
+
+Difference between physical and system qty
+
+7
+
+notes
+
+TEXT
+
+NULL
+
+Notes on the item count
+
+NOT NULL
+
+Product being counted
+
+Table: stock_adjustments
+No
+
+Column
+
+Data Type
+
+Constraint
+
+Description
+
+1
+
+adjustment_id
+
+INT
+
+PK, AUTO INCREMENT
+
+Unique ID of the stock adjustment
+
+FK →
+2
+
+opname_id
+
+INT
+
+stock_opnames.opname_id,
+
+Reference to the stock opname
+
+NOT NULL
+
+3
+
+product_id
+
+INT
+
+FK → products.product_id,
+NOT NULL
+
+Product being adjusted
+
+No
+
+Column
+
+Data Type
+
+Constraint
+
+Description
+
+FK →
+4
+
+warehouse_id
+
+INT
+
+warehouses.warehouse_id,
+
+Warehouse being adjusted
+
+NOT NULL
+5
+
+qty_before
+
+INT
+
+NOT NULL
+
+Stock quantity before adjustment
+
+6
+
+qty_after
+
+INT
+
+NOT NULL
+
+Stock quantity after adjustment
+
+7
+
+adjusted_by
+
+INT
+
+8
+
+adjustment_date
+
+DATETIME
+
+NOT NULL
+
+Date and time of the adjustment
+
+9
+
+reason
+
+TEXT
+
+NULL
+
+Reason for the stock adjustment
+
+FK → users.user_id, NOT
+NULL
+
+User who performed the adjustment
+
+C.​ Entity tables
+D.​ Relations with cardinality of each Relation
+Relation
+
+Cardinality
+
+Description
+
+Master Data
+roles → users
+
+1:N
+
+One role can be assigned to many users
+
+warehouses → users (via
+warehouse_id)
+
+1:N
+
+One warehouse can have many users
+
+warehouses → users (via pic_id)
+
+N:1
+
+Many warehouses can point to one user as PIC
+
+product_categories → products
+
+1:N
+
+One category can have many products
+
+vendors → vendor_products
+
+1:N
+
+One vendor can supply many products
+
+products → vendor_products
+
+1:N
+
+One product can be linked to many vendors
+
+products ↔ vendors (via
+vendor_products)
+
+M:N
+
+One product from many vendors, one vendor supplies
+many products
+
+warehouses → stock
+
+1:N
+
+One warehouse holds stock of many products
+
+products → stock
+
+1:N
+
+One product can have stock in many warehouses
+
+warehouses → goods_receipts
+
+1:N
+
+One warehouse can receive many deliveries
+
+vendors → goods_receipts
+
+1:N
+
+One vendor can make many deliveries
+
+users → goods_receipts
+(received_by)
+
+1:N
+
+One PIC can handle many incoming deliveries
+
+Inventory
+
+Goods Receipt
+
+Relation
+
+Cardinality
+
+Description
+
+goods_receipts →
+goods_receipt_items
+
+1:N
+
+One receipt can have many product line items
+
+vendor_products →
+goods_receipt_items
+
+1:N
+
+One vendor product can appear in many receipt items
+
+products → goods_receipt_items
+
+1:N
+
+One product can appear in many receipt items
+
+users → goods_receipt_items
+(qc_by)
+
+1:N
+
+One QC user can inspect many items
+
+goods_receipt_items →
+return_items
+
+1:1
+
+One rejected item generates exactly one return record
+
+vendors → return_items
+
+1:N
+
+One vendor can receive many returns
+
+products → return_items
+
+1:N
+
+One product can be returned multiple times
+
+users → return_items (returned_by)
+
+1:N
+
+One user can process many returns
+
+warehouses → material_requests
+
+1:N
+
+One warehouse can receive many material requests
+
+departments → material_requests
+
+1:N
+
+One department can submit many requests
+
+users → material_requests
+(approved_by)
+
+1:N
+
+One master user can approve many requests
+
+material_requests →
+material_request_items
+
+1:N
+
+One request can have many product items
+
+products → material_request_items
+
+1:N
+
+One product can appear in many requests
+
+warehouses → stock_opnames
+
+1:N
+
+One warehouse can have many opname sessions
+
+users → stock_opnames
+(conducted_by)
+
+1:N
+
+One PIC can conduct many opnames
+
+users → stock_opnames
+(approved_by)
+
+1:N
+
+One master can approve many opnames
+
+stock_opnames →
+stock_opname_items
+
+1:N
+
+One opname session covers many products
+
+products → stock_opname_items
+
+1:N
+
+One product can appear in many opname sessions
+
+stock_opnames →
+stock_adjustments
+
+1:N
+
+One opname can trigger many adjustments
+
+products → stock_adjustments
+
+1:N
+
+One product can be adjusted many times
+
+warehouses → stock_adjustments
+
+1:N
+
+One warehouse can have many adjustment records
+
+users → stock_adjustments
+(adjusted_by)
+
+1:N
+
+One user can perform many adjustments
+
+Material Request
+
+Stock Opname
+
+2.6​Functional Requirement
+A.​ Context Diagram
+
+​
+
+The context diagram illustrates the interaction between the warehouse
+
+management system and external entities. The system acts as a centralized platform
+that manages inbound goods, outbound transactions, inventory control, and stock
+opname processes
+The vendor send delivery data to the system during inbound process, while the system
+provides return information for rejected or returned goods. The production department
+submits material requests to the system, and the system responds with request status
+and stock availability information. ​
+​
+Warehouse staff interact directly with the system by inputting inbound data, outbound
+data, and stock opname result, in return, the system provides stock information and
+transaction status to support daily warehouse operations.
+A.​ Activity Diagram and Data Flow Diagram
+a.​ Stock In / Stock Out Process
+
+This activity diagram describes the flow of stock movement within the warehouse,
+including stock in, stock out, and stock adjustment. The system updates inventory
+quantities based on inbound goods, material requests, or stock opname results
+
+b.​ Goods Receipt and Quality Qontrol
+
+his activity diagram explains the goods receipt and quality control process. After goods are
+received from vendor, quality inspection is conducted. Accepted items are added to inventory,
+while rejected items are recorded and returned to the vendor
+
+E.​ Material Request Process
+
+This flow handles situations where another department inside the company needs something
+from the warehouse. They put in a request listing what they need and how much. That request
+sits in a pending state until a Master user looks it over and decides whether to approve or
+reject it. If it's approved, the system checks whether there's enough stock on hand. When
+stock is available, the PIC pulls the items and hands them over to the requesting department,
+and the stock count drops automatically. If there isn't enough stock, the PIC gets notified so
+they can figure out next steps.
+
+F.​ User Login and Role Management
+
+This flow covers how someone gets into the system. When a user opens the app, they type in
+their email and password. The system checks whether those credentials match what's stored
+in the database. If they don't match, the user gets an error and has to try again. Once they're
+in, the system figures out what role they have — a Master gets full access to everything, a
+PIC lands on the receiving and request pages, and a QC user only sees the inspection section.
+Basically , it's the front door of the whole application.
+
+G.​Stock opname flow
+
+This flow describes the periodic physical stock count that warehouses do to make sure what's
+in the system actually matches what's on the shelves. Someone creates an opname session,
+then the PIC goes through the warehouse and counts each product by hand, recording the
+actual number in the system. The system then compares that against what it thinks the stock
+level is and calculates any difference. If everything lines up, the opname closes out cleanly. If
+there's a gap, the findings go to a Master for sign-off, and once approved, the system updates
+the stock figures to reflect the real-world count.
+B.​ Describe in detail the process inside the Activity Diagram and Data flow diagram
+1. User Login & Role Flow
+When someone opens the app, they enter their email and password. The system checks if
+the account exists — wrong credentials means they try again, correct ones move them
+forward. From there the system looks at what role that account has and sends them to the
+right place. Masters get full access, PICs go to the receiving and request pages, and QC users
+only see the inspection section. Simple as that.
+2. Goods Receipt & QC Flow
+When a vendor shows up with a delivery, the PIC logs it into the system and records what
+came in. The QC team then physically checks each item. Anything that passes gets added to
+stock right away. Anything that fails gets logged as a return and sent back to the vendor. Once
+everything is checked, the system marks the delivery as either complete or still partially
+outstanding depending on how much of the expected quantity actually arrived.
+3. Material Request Flow
+When a department needs something from the warehouse, they submit a request through
+the system. That request waits until a Master reviews it and decides to approve or reject it. If
+approved, the system checks whether the stock is actually available. If it is, the PIC pulls the
+items and hands them over, and the stock drops automatically. If there is not enough stock,
+the PIC gets notified to sort it out.
+
+4. Stock Opname Flow
+Stock opname is basically a physical stock count to make sure what is in the system
+matches what is actually on the shelves. The PIC goes through the warehouse, counts
+everything by hand, and enters the numbers. The system then calculates the difference. If
+everything matches, the opname closes out clean. If there are gaps, the findings go to the
+Master for approval, and once signed off the stock gets corrected to reflect the real numbers.
+
+5. Stock In / Out Flow
+This diagram is the big picture view of everything that moves stock up or down. Stock
+goes up when a vendor delivers goods that pass QC. Stock goes down when a department
+request gets fulfilled. Stock gets corrected when an opname finds a discrepancy. All three
+situations update the same stock table, which is the one place the system relies on to know
+how much of each product is actually in the warehouse at any given time.
+
+D.​ ALTERNATIVE SOLUTION
+Here are the alternative solutions:
+1. Paper-Based System
+One of the most straightforward alternatives is handling all warehouse operations manually
+using physical documents. Every goods receipt, material request, stock count, and vendor
+record would be written down on paper forms and stored in folders or filing cabinets. This
+approach requires no technical setup and anyone can use it without training. However, as the
+volume
+
+of
+
+transactions
+
+grows,
+
+finding
+
+specific
+
+records
+
+becomes
+
+increasingly
+
+time-consuming. There is also a much higher chance of human error, lost documents, and
+inconsistent data across different records. For a warehouse dealing with multiple vendors and
+departments making regular requests, paper quickly becomes unmanageable and unreliable.
+
+2. Manual Spreadsheet (Excel)
+
+Another common alternative is using Microsoft Excel or Google Sheets to track warehouse
+activity. Each sheet can represent a different aspect of operations such as stock levels,
+incoming deliveries, or pending requests. It is easy to get started, most people already know
+how to use it, and it costs nothing extra if the company already has Office licenses. The
+problem is that spreadsheets are not built for multi-user environments. When more than one
+person needs to update the same file at the same time, data conflicts and version issues start
+appearing. There is also no built-in workflow, meaning there is nothing stopping someone
+from skipping steps like QC approval or stock updates. As the data grows larger, spreadsheets
+also become slower and harder to maintain without dedicated effort.
+3. Third-Party Inventory Tools (Odoo, Fishbowl, etc.)
+A more sophisticated alternative is adopting an existing off-the-shelf warehouse or inventory
+management platform like Odoo, Fishbowl, or similar tools. These systems come pre-built
+with features covering stock tracking, vendor management, purchase orders, and reporting
+out of the box. They are generally reliable and well-tested since they have been used by many
+businesses before. The downside is that these platforms are designed to serve a wide range of
+industries, which means the workflows and terminology may not match exactly how this
+company operates. Customizing them to fit specific needs like the QC flow, pending order
+logic, or the internal product code system can be expensive and time-consuming. Licensing
+costs can also be significant, especially for a company that is still relatively small and only
+managing one warehouse at this stage.
+
+

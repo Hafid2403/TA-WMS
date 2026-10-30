@@ -1,0 +1,16 @@
+services:
+  web:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: wms-frontend
+    container_name: wms-frontend
+    restart: unless-stopped
+    ports:
+      - "49977:80"
+    networks:
+      - wms-network
+
+networks:
+  wms-network:
+    external: true

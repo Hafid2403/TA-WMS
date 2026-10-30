@@ -1,0 +1,626 @@
+Capstone Design Proposal
+Optimization Business Flow Company Using
+ERP
+
+No.
+1.
+2.
+3.
+
+GROUP MEMBER:
+Student Name
+Student ID
+Muhammad Hafid
+001202300224
+Al Asyrofi
+Muhammad Kasyfil
+001202300022
+Aziz Setiyadi
+Muhammad Habibi
+012202300044
+Dzikra
+Advisor : Sir Nurhadi Sukmana
+
+Submitted for
+Capstone Design Project
+to Faculty of Computer Science
+President University
+
+i
+
+Study Program
+Information
+Technology
+Information
+Technology
+Information System
+
+TABLE OF CONTENT
+A. PROBLEM SIMULATION​
+1. Background of the Problem​
+2. Problem from a Customer Perspective​
+3. Problem Statement​
+3.1. Customers Problem​
+3.2. Problem Characteristics​
+4. Objective​
+B. PROBLEM ANALYSIS​
+1. Sustainability Aspect​
+2. Operational Aspect​
+3. Manufacturability Aspect​
+C. SOLUTION SELECTION & SCENARIOS​
+1. Business Process Improvement Without System Integration​
+2. Implementation of Department-Based Systems​
+3. Implementation of an Integrated ERP System​
+4. Solution Selection​
+D. DEVELOPMENT EFFORT​
+1. Manpower Job Description​
+2. Development Tools​
+3. Test Equipment​
+5. Timelines​
+
+ii
+
+1
+1
+1
+2
+2
+3
+3
+4
+4
+4
+4
+5
+5
+5
+5
+6
+7
+7
+7
+9
+9
+
+STATEMENT OF ORIGINALITY
+In my capacity as an active student at President University and as the author of the Capstone
+Design Project stated below:
+Name​ ​
+
+​
+
+: 1. Muhammad Hafid Al Asyrofi – 001202300224
+
+​
+
+​
+
+​
+
+2. Muhammad Kasyfil Aziz Setiyadi – 001202300022
+
+​
+
+​
+
+​
+
+3. Muhammad Habibi Dzikra – 012202300044
+
+Faculty​​
+
+​
+
+: Computer Science
+
+I hereby declare that my Capstone Design Project entitled Optimization Business Flow using
+Enterprise Resource Planning will be personally responsible for the consequences of these
+acts of plagiarism and will accept the sanctions against these acts in accordance with the rules
+and policies of President University.
+I also declare that this work, either in whole or in part, has not been submitted to another
+university to obtain a degree.
+
+Cikarang, 2023
+Signer 1
+
+Signer 2
+
+Signer 3
+
+Student Name –
+NIM
+
+Student Name –
+NIM
+
+Student Name –
+NIM
+
+iii
+
+TITLE
+Approved:
+
+​
+
+​
+
+Lecturers Name
+Capstone Advisor
+
+{Head of Study Program Name}
+Program Head of XX
+
+Prof. Dr. Ir. Wiranto Herry Utomo, M.Kom.
+Dean of Faculty of Computer Science
+
+​
+
+​
+​
+​
+​
+
+iv
+
+BAB 1
+A.​PROBLEM SIMULATION
+1.​
+
+Background of the Problem
+
+​
+​
+
+In the Business Environment right now, companies right now are required to have
+
+efficient, integrated, and well structured business processes to support operational
+activities and decision-making. However, the company is currently facing several
+challenges that relate to the business core flow, which is still not well organized and not
+fully integrated across department
+At present, some operations activities are still carried out using separate systems
+or manual processes. As a result, data is stored in different platforms, leading to data
+redundancy delays in information exchange, and a higher risk of human error. These
+issues negatively impact coordination between departments such as warehouse and
+shipping, causing the overall business process to become less effective.
+Furthermore, the absence of an integrated system limits management’s ability to
+monitor business performance in real time, Decision-making processes often rely on
+incomplete or outdated information, which may affect the accuracy of strategic and
+operational decisions. This situation reduces the company’s ability to respond quickly to
+operational problems operations
+
+2.​
+​
+​
+
+Problem from a Customer Perspective
+
+From the customer perspective, currently business process flow often causes
+
+several issues. Such as insufficient data on incoming and outgoing goods, and tracking
+records it’s cause the lack of system integration and unstructured workflows result in
+delays, inaccurate information, and limited transparency throughout the customer
+journey.​
+​
+Specifically, customers may experience the following problems:
+●​ Delays in order processing and delivery, due to inefficient coordinations
+between admin, warehouse, and logistics departments
+1
+
+●​ Inaccurate product availability information, where customers place orders for
+items that are actually out of stock.
+●​ Human errors occurs in order to fulfillment data, such as incorrect items,
+quantities, or incomplete deliveries
+●​ Waste time to search data and collect data, such as tracking delivery, receipt,
+and goods distribution schedules
+
+3.​
+
+Problem Statement
+Based on identified issues, customers experience several problems caused by
+
+unstructured systems and non-integrated business processes. These problems affect to
+business continuity
+
+3.1.​
+
+Customers Problem
+
+The main problems experienced by customers include:
+●​ Delays in order processing and delivery
+Customers often face longer waiting times due to efficient coordination
+between department absence of real-time and receipt scheduling.
+●​ Inaccurate and inconsistent information
+Customers receive conflicting information regarding product availability,
+order status, and delivery timelines because data is stored in separate
+systems.
+●​ Errors in order fulfillment
+Issues such as incorrect items, incorrect quantities, or incomplete
+deliveries occur due to the lack centralized control over inbound and
+outbound goods
+●​ Billing and payment discrepancies ​
+Mismatches between orders, deliveries, and invoice
+
+2
+
+3.2.​
+
+Problem Characteristics
+
+●​ Open-Ended Problem
+The problems cannot be resolved by a single short-term fix, as they are ​
+​
+
+interconnected across multiple business functions and require an integrated
+
+​
+
+system solution
+●​ Urgent Problem
+These issues directly impact customer satisfaction, increase complaints, and pose
+
+​
+
+a risk of customer churn if not addressed promptly
+●​ Real-World Problem
+The problems reflect common challenges faced by companies with manual or
+fragmented systems, where customers demand fast, accurate, and transparent
+services
+
+4.​
+
+Objective
+The objective of this project is:
+●​ To integrate business processes across departments
+​To unify business functions such as warehouse, purchasing, and logistics into
+​ a single centralized system
+●​ To streamline business process flow
+To create a more structured, efficient, and standardized workflow for order
+processing, inventory management, and delivery operations
+●​ To support better decision-making
+
+​
+
+To provide management with real-time, accurate, and reliable reports ​
+
+​
+
+operational and strategic decision-making
+●​ To increase operational efficiency and productivity
+
+​
+
+To reduce manual work, human error, and process redundancy through ​
+System automation
+●​ To improve inventory visibility and control
+
+​
+
+To enable real-time tracking of inbound and outbound goods, stock levels​
+
+​
+
+and delivery schedules
+
+3
+
+B. PROBLEM ANALYSIS
+1.​ Sustainability Aspect
+The current business processes rely heavily on manual activities and
+disconnected systems, which are not sustainable in the long term. The lack of
+integration causes repeated data entry, inefficient use of resources, and difficulty
+in maintaining consistent operational standards as the company grows
+●​ High dependency manual processes increases the risk of human error
+●​ Inefficient use of time, manpower, and operational resources
+●​ Limited scalability to support future business growth
+●​ Difficulty in maintaining consistent and standardized processes
+
+2.​ Operational Aspect
+Absence of an integrated ERP system reduce overall operational efficiency
+and responsiveness
+●​ Slow order-to-delivery cycle
+●​ Delays in accessing accurate information
+●​ Limited real-time monitoring of business activities
+●​ Ineffective inter-department communication
+
+3.​ Manufacturability Aspect
+​​
+
+Although the company may not be a manufacturing-based organization,
+
+​ this aspect refers to the operability and ease of executing daily operations. The
+​ lack of standardized system makes operational activities difficult to manage and
+​ control
+●​ Complex and inconsistent workflows across departments
+●​ Difficult in coordinating inbound and outbound goods activities
+●​ Limited traceability of orders, deliveries, and receipts
+●​ High operational dependency on individual experience rather than
+system-driven processes
+
+4
+
+C. SOLUTION SELECTION & SCENARIOS
+1.​ Business Process Improvement Without System Integration
+This option focuses on improving the current way of working by updating
+standard operating procedures (SOPs), improving coordination between departments,
+and increasing manual supervision in daily operations. The main objective is to reduce
+inefficiencies by encouraging better discipline and more consistent processes, without
+introducing a new system.
+This approach requires relatively low cost and only small changes to the existing
+setup. However, it does not solve the main problem, which is scattered and
+unconnected data. Since this solution relies heavily on human involvement, it can be
+difficult to maintain over time, especially as business activities and transaction volumes
+continue to grow.
+
+2.​ Implementation of Department-Based Systems
+The solution suggests using separate systems for each department, such as
+individual applications for sales, inventory, and finance. With dedicated systems in place,
+each department can work more efficiently and reduce some manual tasks.
+However, because these systems are not fully connected, data is still stored separately
+across departments. This makes coordination more difficult and limits access to real-time
+information. In the long run, maintaining multiple systems and handling system
+integration can increase costs and reduce the effectiveness of overall business process
+management.
+
+3.​ Implementation of an Integrated ERP System
+This solution proposes the use of an integrated Enterprise Resource Planning
+(ERP) system that connects all core business functions within a single platform. With this
+system, data can be shared in real time, workflows become more structured, and
+coordination between departments improves significantly.
+
+5
+
+Although this option requires higher initial investment, longer implementation
+time, and proper user training, it provides the most long-term benefits. The ERP system
+supports business growth, improves decision-making, and helps deliver better service
+quality to customers.
+
+4.​ Solution Selection
+After reviewing all the available options, the integrated ERP system is
+considered the most suitable solution. This approach directly addresses the main
+issues by reducing data separation, improving process integration, and supporting
+long-term business sustainability. Therefore, implementing an ERP system is seen
+as the best strategic choice to improve overall business performance.
+
+​
+
+​
+
+6
+
+D. DEVELOPMENT EFFORT
+1.​ Manpower Job Description
+Job Description
+Name
+
+Muhammad Hafid Al Asyrofi
+
+Muhammad Kasyfil Aziz Setiadi
+
+Muhammad Habibi Dzikra
+
+Position
+
+Leader
+
+Job Description
+1.​ Building ERD for
+Business Flow ERP
+2.​ Execution Front-End
+3.​ QA-Tester
+4.​ UI-UX
+
+Member
+
+1.​ Building ERD for
+Business Flow ERP
+2.​ Make Back-End for logic
+flow
+3.​ QA- Tester
+4.​ UI-UX
+
+Member
+
+1.​ Building ERD for
+Business Flow ERP
+2.​ Make Back-End for logic
+flow
+3.​ QA-Tester APP
+
+2. Development Tools
+The following tools are required for building an Integrated business system. And the
+tools will be support system design, implementation, testing, and deploy
+●​ Programming Language​
+For the programming language we use php v8.1 and little bit java for some logic
+and for the database we will use sql ​
+●​ Backend development framework ​
+- laravel v10.1 for the main backend framework to develop a structure, secure,
+and scalable web base application following mvc architecture ​
+- composer v2 for dependency management in laravel project​
+
+​
+
+7
+
+●​ Frontend development tools
+-​ HTML for user interface
+-​ CSS use for styling and layout design
+-​ Bootstrap for make interactive and responsive UI
+●​ Database management system ​
+For the database we will use mySQL v8.2 because we more familiar with mySQL
+●​ Development environment & tools
+-​ Vscode for primary code editor
+-​ Xampp used as local development environment
+-​ Github / gitlab used for source code repository management
+
+8
+
+3. Test Equipment
+No
+
+Equipment
+
+Type
+
+Specification/Func
+tion
+
+1
+
+Laptop
+
+Hardware
+
+Development and
+Testing
+
+2
+
+Smartphone
+
+Harware
+
+Mobile Testing
+
+3
+
+Web Browser
+
+Software
+
+Functional Testing
+
+4
+
+ERP Test Database
+
+Software
+
+System Testing
+With Dummy Data
+
+4.​ Cost Estimation
+No
+
+Item
+
+Description
+
+Cost
+
+1
+
+VPS server
+
+Cloud Server For
+ERP Deployment
+
+Rp 200.000 - Rp
+300.000 / Month
+
+2
+
+Domain
+
+Application
+Domain
+
+3
+
+Laptop
+
+Hardware
+
+Rp 150.000 250.000 / Month
+-
+
+5.​ Timelines
+
+Phas
+e
+
+W
+1
+
+W
+2
+
+W
+3
+
+W
+4
+
+W
+5
+
+W W
+6 7
+
+W
+8
+
+W
+9
+
+W
+10
+
+W
+11
+
+W
+12
+
+W
+13
+
+W
+14
+
+W
+15
+
+W
+16
+
+Req
+uire
+ment
+Anal
+ysis
+Busi
+ness
+Proc
+
+9
+
+ess
+Map
+ping
+Syst
+em
+Desi
+gn
+Deve
+lopm
+ent
+Testi
+ng
+QA
+User
+Trai
+ning
+Depl
+oym
+ent
+Doc
+ume
+ntati
+on
+
+10
+
+11
+
+
